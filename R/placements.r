@@ -1,10 +1,10 @@
 # create data frame of requested chromosomes
 placements <- function(df, chromosomes, xsize, ysize, telsize){
   targets_chr <- data.frame(targets = as.character(names(table(df$chr))[chromosomes]),
-                            leftborder = round(as.numeric(calculate.chromosome.position(xsize, length(chromosomes)), 1)),
-                            rightborder = round(as.numeric(calculate.chromosome.position(xsize, length(chromosomes)) + telsize), 1),
+                            leftborder = as.numeric(calculate.chromosome.position(xsize, length(chromosomes))),
+                            rightborder = as.numeric(calculate.chromosome.position(xsize, length(chromosomes)) + telsize),
                             size = round(as.numeric(tapply(df$cM, df$chr, max)[chromosomes])), 1)
-  targets_chr$height <- round(900 * (targets_chr$size / max(targets_chr$size)), 1)
+  targets_chr$height <- round(900 * (targets_chr$size / max(targets_chr$size)), 1)	
 
   # prepare main table of requested chromosomes
   df <- df[df$chr %in% targets_chr$targets, ]
