@@ -1,4 +1,3 @@
-marker	chr	cM
 marker0	lg0	0
 marker1	lg0	0.9
 marker2	lg0	2.1
