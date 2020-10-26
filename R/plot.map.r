@@ -34,7 +34,7 @@ plot.map <- function(chrmap = NULL,
           plotSizeX <- length(lingroup) * 80
           plotSizeY <- 1000
 
-          # calculate and populate original table with absolute positions of everey marker and chromosome
+          # calculate and populate original table with absolute positions of every marker and chromosome
           # the 'placements' function returns the main table used in the package
           locations <- placements(chrmap, lingroup, plotSizeX, plotSizeY, TelomereSize)
           print(head(locations))
