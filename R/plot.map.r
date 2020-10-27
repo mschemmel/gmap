@@ -120,12 +120,16 @@ plot.map <- function(chrmap = NULL,
             # draw numerical marker count above respective linkage groups
             marker.count.label = as.vector(table(locations$chr))[1:length(lingroup)]
             text(x = mid, y = 1060, labels = marker.count.label, cex = cex.marker.count, adj = 0.5)
-
+			
+			# calculate relative height of marker count
+			emptyspace = 100
+			relcount = (marker.count.label * 100) / max(marker.count.label)
+			
             # plot visualization of numerical representation above respective linkage groups
             segments(x0 = mid,
                      y0 = plotSizeY + 100,
                      x1 = mid,
-                     y1 = plotSizeY + 100 + marker.count.label,
+                     y1 = plotSizeY + 100 + relcount,,
                      lwd = 5,
                      col = marker.count.color)
           }
