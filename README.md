@@ -3,7 +3,7 @@ An R package to visualize genetic maps.
 
 
 <p align="center">
-<img src="/img/example.pdf" style="width:70%;">
+<img src="/img/example.svg" style="width:70%;">
 </p>
 
 ## TODO:
