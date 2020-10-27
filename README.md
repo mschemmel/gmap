@@ -2,8 +2,8 @@
 An R package to visualize genetic maps.
 
 
-lign="center">
-<img src="/img/example.png">
+<p align="center">
+<img src="/img/example.png" style="width:70%;">
 </p>
 
 TODO:
