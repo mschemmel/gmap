@@ -37,7 +37,6 @@ plot.map <- function(chrmap = NULL,
           # calculate and populate original table with absolute positions of every marker and chromosome
           # the 'placements' function returns the main table used in the package
           locations <- placements(chrmap, lingroup, plotSizeX, plotSizeY, TelomereSize)
-          print(head(locations))
 
           # store midpoints of drawn linkage groups
           mid <- unique(locations$leftborder) + (TelomereSize / 2)
@@ -120,7 +119,7 @@ plot.map <- function(chrmap = NULL,
           if (show.marker.count) {
             # draw numerical marker count above respective linkage groups
             marker.count.label = as.vector(table(locations$chr))[1:length(lingroup)]
-            text(x = mid, y = 1050, labels = marker.count.label, cex = cex.marker.count, adj = 0.5)
+            text(x = mid, y = 1060, labels = marker.count.label, cex = cex.marker.count, adj = 0.5)
 
             # plot visualization of numerical representation above respective linkage groups
             segments(x0 = mid,
