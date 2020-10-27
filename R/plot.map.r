@@ -37,8 +37,8 @@ plot.map <- function(chrmap = NULL,
           # calculate and populate original table with absolute positions of every marker and chromosome
           # the 'placements' function returns the main table used in the package
           locations <- placements(chrmap, lingroup, plotSizeX, plotSizeY, TelomereSize)
-
-          # store midpoints of drawn linkage groups
+          
+		  # store midpoints of drawn linkage groups
           mid <- unique(locations$leftborder) + (TelomereSize / 2)
 
           # set default marker color
@@ -59,8 +59,8 @@ plot.map <- function(chrmap = NULL,
 
           # show axis if requested
           if (show.axis == TRUE) {
-            mtext(label.x,2,2)
-            roundUp <- function(x,to=100) { to*(x%/%to + as.logical(x%%to)) }
+            mtext(label.x, 2, 2)
+            roundUp <- function(x, to = 100) { to*(x%/%to + as.logical(x%%to)) }
             maxcm <- roundUp(max(locations$cM))
             axissteps <- 10
             axis(side = 2, at = rev(seq(0, 1000, (1000 / axissteps))), labels = seq(0, maxcm, (maxcm / axissteps)))
@@ -74,7 +74,8 @@ plot.map <- function(chrmap = NULL,
               label.chr = label.chr[1:length(lingroup)]
               warning("Provided number of chromosome labels does not match actual number of given linkage groups.")
             }
-            text(x = mid, y = -100, labels = label.chr, cex = cex.label.chr, adj = 0.5)
+			label.chr = names(table(locations$chr))
+			text(x = mid, y = -100, labels = label.chr, cex = cex.label.chr, adj = 0.5)
           }
 
           # add marker color for highlighting and peak LOD values
@@ -123,7 +124,7 @@ plot.map <- function(chrmap = NULL,
 			
 			# calculate relative height of marker count
 			emptyspace = 100
-			relcount = (marker.count.label * 100) / max(marker.count.label)
+			relcount = (marker.count.label * emptyspace) / max(marker.count.label)
 			
             # plot visualization of numerical representation above respective linkage groups
             segments(x0 = mid,
