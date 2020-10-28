@@ -19,12 +19,11 @@ library(gmap)
 # import genetic map
 genmap <- read.map("/examples/map.txt")
 
-# minimal example:
 # plot genetic map with requested linkage groups
 # store IDs of linkage groups
 linkagegroup <- c("lg0", "lg1", "lg2", "lg3", "lg4") 
 
-# plot final map
+# minimal example
 plot.map(genmap, linkagegroup)
 
 # more advanced plotting
