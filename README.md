@@ -28,7 +28,7 @@ plot.map(genmap, linkagegroup)
 
 # more advanced plotting
 plot.map(genmap,
-         linkgroups, 
+         linkagegroup, 
          title = "Organism", 
          marker.color = "aquamarine3",
          show.marker.count = TRUE,
