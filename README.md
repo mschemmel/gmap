@@ -8,7 +8,8 @@ An R package to visualize genetic maps.
 
 ## Installation
 ### Development version
-```
+```r
+# use devtools to install the development version
 devtools::install_github("mschemmel/gmap")
 ```
 
