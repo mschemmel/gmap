@@ -1,8 +1,7 @@
 # create data frame of requested chromosomes
 placements <- function(df, chromosomes, xsize, ysize, telsize){
   # prepare data frame of calculated locations
-  targets_chr <- data.frame(#targets = as.character(names(table(df$chr)))[chromosomes],
-                            targets = as.character(chromosomes),
+  targets_chr <- data.frame(targets = as.character(chromosomes),
 							leftborder = as.numeric(calculate.chromosome.position(xsize, length(chromosomes))),
                             rightborder = as.numeric(calculate.chromosome.position(xsize, length(chromosomes)) + telsize),
                             size = round(as.numeric(tapply(df$cM, df$chr, max)[chromosomes])), 1)
