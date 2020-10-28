@@ -4,6 +4,8 @@ An R package to visualize genetic maps.
 
 ## Installation
 ### Development version
+So far, gmap is only available on GitHub and not on CRAN.
+
 ```r
 # use devtools to install the development version
 devtools::install_github("mschemmel/gmap")
@@ -37,6 +39,7 @@ plot.map(genmap,
 
 For more detailed information see the wiki.
 
+## Example
 
 <p align="center">
 <img src="/img/example.svg" width:"50%">
