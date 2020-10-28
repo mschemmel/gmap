@@ -21,7 +21,7 @@ read.map <- function(file = NULL, ...) {
 
     if (ncol(init) == 3) {
       colnames(init) <- c("marker", "chr", "cM")
-      warning("No LOD Score provided in genetic map.")
+      print("Information: No LOD Score provided in genetic map.")
     } else if (ncol(init) == 4) {
       colnames(init) <- c("marker", "chr", "cM", "LOD")
     } else {
