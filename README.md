@@ -2,10 +2,6 @@
 An R package to visualize genetic maps.
 
 
-<p align="center">
-<img src="/img/example.svg" width:"50%">
-</p>
-
 ## Installation
 ### Development version
 ```r
@@ -14,6 +10,9 @@ devtools::install_github("mschemmel/gmap")
 ```
 
 
+<p align="center">
+<img src="/img/example.svg" width:"50%">
+</p>
 
 ## TODO:
 - [ ] check y axis (show.axis = TRUE)
