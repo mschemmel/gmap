@@ -18,8 +18,8 @@ calculate.chromosome.position <- function(pSize = NULL, count = NULL) {
     
       return(calculatedPosition)
     
-    } 
-	else {
+    }
+    else {
       toLeft <- (count - 1) / 2
       toRight <- (count - 1) / 2
       
