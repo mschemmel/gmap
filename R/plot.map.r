@@ -130,7 +130,7 @@ plot.map <- function(chrmap = NULL,
             segments(x0 = mid,
                      y0 = plotSizeY + 100,
                      x1 = mid,
-                     y1 = plotSizeY + 100 + relcount,,
+                     y1 = plotSizeY + 100 + relcount,
                      lwd = 5,
                      col = marker.count.color)
           }
