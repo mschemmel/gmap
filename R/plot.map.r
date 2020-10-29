@@ -21,7 +21,7 @@ plot.map <- function(chrmap = NULL,
 
           # error handling
           if (is.null(chrmap)) {
-            stop("No genome table specified")
+            stop("No marker/linkage group table specified")
           }
 
           if (length(lingroup) > length(table(chrmap$chr))) {
