@@ -47,3 +47,5 @@ For more detailed information see the wiki.
 ## TODO:
 - [ ] check y axis (show.axis = TRUE)
 - [x] represent counter label as relative value (prevent to blast empty space)
+- [ ] find bug of causing "X1" in locations dataframe
+- [ ] NA in locations dataframe if only one linkage group displayed
