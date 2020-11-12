@@ -1,15 +1,15 @@
 # create data frame of requested chromosomes
-placements <- function(df, chromosomes, xsize, ysize, telsize){
+placements <- function(dfori, chromosomes, xsize, ysize, telsize){
   # prepare data frame of calculated locations
   targets_chr <- data.frame(targets = as.character(chromosomes),
 							leftborder = as.numeric(calculate.chromosome.position(xsize, length(chromosomes))),
                             rightborder = as.numeric(calculate.chromosome.position(xsize, length(chromosomes)) + telsize),
-                            size = round(as.numeric(tapply(df$cM, df$chr, max)[chromosomes])), 1)
-
+                            size = round(as.numeric(tapply(dfori$cM, dfori$chr, max)[chromosomes]),1))
+  
   targets_chr$height <- round((900 * (targets_chr$size / max(targets_chr$size))), 1)	
    
   # prepare main table of requested chromosomes
-  df <- merge(df, targets_chr, by.x = "chr", by.y = "targets", all.y = TRUE)
+  df <- merge(dfori, targets_chr, by.x = "chr", by.y = "targets")
   df <- df[df$chr %in% targets_chr$targets, ]
 
   # calculate marker position
