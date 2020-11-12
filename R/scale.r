@@ -3,7 +3,6 @@
 scale <- function(maxval) {
     roundto = 100
 	roundup <- function(maxval, to = roundto) { to*(maxval%/%to + as.logical(maxval%%to)) }
-
 			
 	scalerange = seq(100,1000,900/(roundup(maxval)/roundto))	
 	scalelabels = rev(seq(0,roundup(maxval), roundto)) 	
@@ -17,6 +16,7 @@ scale <- function(maxval) {
              x1 = -20, 
              y1 = scalerange,
              col = "black")
-
-    text(-50, scalerange, scalelabels, cex = 0.5)	
+	
+	# show axis labels
+    text(-10, scalerange, scalelabels, cex = 0.5)	
 }
