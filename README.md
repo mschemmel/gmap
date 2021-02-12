@@ -4,7 +4,7 @@ An R package to visualize genetic maps.
 
 ## Installation
 ### Development version
-So far, gmap is only available on GitHub and not on CRAN.
+So far, gmap is only available on GitHub.
 
 ```r
 # use devtools to install the development version
