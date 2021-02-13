@@ -20,7 +20,7 @@ calculate.chromosome.position <- function(plotSize = NULL, count = NULL) {
       return(posRight)
     }
 
-    # if single linkage group is requested -> draw at midpoint
+    # if single linkage group is requested -> draw at midpoint (-offset)
     if (count == 1) {
       return(midpoint - offset)
     }
