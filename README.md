@@ -4,7 +4,7 @@ An R package to visualize genetic maps.
 
 ## Installation
 ### Development version
-So far, gmap is only available on GitHub.
+So far, gmap is only available on GitHub because it is still in development stage.
 
 ```r
 # use devtools to install the development version
@@ -36,16 +36,10 @@ plot.map(genmap,
          show.axis = TRUE)
 ```
 
-For more detailed information see the wiki.
+For more detailed information see the wiki (in planning).
 
 ## Example
 
 <p align="center">
 <img src="/img/example.svg" width:"50%">
 </p>
-
-## TODO:
-- [ ] check y axis (show.axis = TRUE)
-- [x] represent counter label as relative value (prevent to blast empty space)
-- [x] find bug of causing "X1" in locations dataframe
-- [x] NA in locations dataframe if only one linkage group displayed
