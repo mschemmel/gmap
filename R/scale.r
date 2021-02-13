@@ -22,5 +22,5 @@ scale <- function(maxval) {
     #         col = "black")
 	
 	# show axis labels
-    text(-1, scalerange, scalelabels, cex = .8)	
+    text(-10, scalerange, scalelabels, cex = .8)	
 }
