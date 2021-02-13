@@ -8,15 +8,19 @@ scale <- function(maxval) {
 	scalelabels = rev(seq(0,roundup(maxval), roundto)) 	
 	
 	# show main vertical scale line	
-	segments(x0 = -10, y0 = 0, x1 = -10, y1 = 1000, col = "black")
+	#segments(x0 = -1, 
+	#		 y0 = 0,
+	#		 x1 = -1,
+	#		 y1 = 1000,
+	#		 col = "black")
 	
 	# show ticks
-	segments(x0 = -10,
-             y0 = scalerange, 
-             x1 = -20, 
-             y1 = scalerange,
-             col = "black")
+	#segments(x0 = -1,
+    #         y0 = scalerange, 
+    #         x1 = -10, 
+    #         y1 = scalerange,
+    #         col = "black")
 	
 	# show axis labels
-    text(-10, scalerange, scalelabels, cex = 0.5)	
+    text(-1, scalerange, scalelabels, cex = .8)	
 }
