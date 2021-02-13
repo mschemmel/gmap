@@ -1,4 +1,4 @@
-calculate.chromosome.position <- function(plotSize = NULL, count = NULL) {
+calculate.linkage.position <- function(plotSize = NULL, count = NULL) {
     if(is.null(plotSize)){
       error("Size of plot is missing.")
     }
@@ -24,7 +24,6 @@ calculate.chromosome.position <- function(plotSize = NULL, count = NULL) {
     if (count == 1) {
       return(midpoint - offset)
     }
-
     # if count is even
     if ((count %% 2) == 0) {
       perGroup <- count / 2
