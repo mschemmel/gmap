@@ -3,7 +3,7 @@ calculate.chromosome.position <- function(plotSize = NULL, count = NULL) {
       error("Size of plot is missing.")
     }
     if(is.null(count)){
-      error("Number of chromosomes missing.")
+      error("Number of linkage groups missing.")
     }
     
     distance <- 80
