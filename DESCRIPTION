@@ -4,11 +4,13 @@ Title: Visualize genetic maps
 Version: 0.1.0
 Author: Markus Schemmel 
 Maintainer: Markus Schemmel <mschemmel@online.de>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: GNU
+Description: Genetic maps (linkage maps) are used to visualize positions of genes or genetic markers based on their recombination 
+    frequency rather than their real physical location. The gmap package provides an approach to visualize genetic maps 
+    in a simple and efficient way.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports:
 Suggests:
 RoxygenNote: 7.1.1
+URL: https://github.com/mschemmel/gmap
