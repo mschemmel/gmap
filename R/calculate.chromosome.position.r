@@ -1,43 +1,40 @@
-calculate.chromosome.position <- function(pSize = NULL, count = NULL) {
-    distance <- 80
-    midpoint <- pSize / 2
-    
-    # test if number of requested linkage groups is odd or even to calculate position
-    if ((count %% 2) == 0) {
-	  toLeft <- count / 2
-      toRight <- count / 2
-      
-      PositionLeft <- seq(midpoint - (distance * toLeft), midpoint, distance)
-      PositionLeft <- PositionLeft[1:length(PositionLeft) - 1]
-      PositionRight <- seq(midpoint, midpoint + (distance * toRight), distance)
-      PositionRight <- PositionRight[2:length(PositionRight)]
-      
-      # the distance between two chromosomes is set to '40' (arbitrary defined)
-      calculatedPosition <- c(PositionLeft + 40, PositionRight - 40)
-      calculatedPosition <- calculatedPosition - 20
-    
-      return(calculatedPosition)
-    
+calculate.chromosome.position <- function(plotSize = NULL, count = NULL) {
+    if(is.null(plotSize)){
+      error("Size of plot is missing.")
     }
+    if(is.null(count)){
+      error("Number of chromosomes missing.")
+    }
+    
+    distance <- 80
+    midpoint <- plotSize / 2
+    offset <- 20
+    lgsize <- 40
+
+    position.left <- function(x) {
+      posLeft <- head(seq(midpoint - (distance * x), midpoint, distance), n = -1)
+      return(posLeft)
+    }
+    position.right <- function(x) {
+      posRight <- tail(seq(midpoint, midpoint + (distance * x), distance), n = -1)
+      return(posRight)
+    }
+
+    # if single linkage group is requested -> draw at midpoint
+    if (count == 1) {
+      return(midpoint - offset)
+    }
+
+    # if count is even
+    if ((count %% 2) == 0) {
+      perGroup <- count / 2
+      coordinates <- c(position.left(perGroup) + lgsize, position.right(perGroup) - lgsize) - offset
+      return(coordinates)
+    }
+    # if count is odd
     else {
-		# if only a single linkage group is requested, draw at midpoint
-		if (count == 1) {
-			return(midpoint - 20)
-		}
-		else {
-			toLeft <- (count - 1) / 2
-			toRight <- (count - 1) / 2
-			  
-			PositionLeft <- seq(midpoint - (distance * toLeft), midpoint, distance)
-			PossitionLeft <- PositionLeft[1:length(PositionLeft) - 1]
-			PositionRight <- seq(midpoint, midpoint + (distance * toRight), distance)
-			PositionRight <- PositionRight[2:length(PositionRight)]
-			  
-			# the distance between two chromosomes is set to '40' (arbitrary defined)
-			calculatedPosition <- c(PositionLeft, midpoint, PositionRight)
-			calculatedPosition <- calculatedPosition - 20
-			  
-			return(calculatedPosition)
-		}
+      perGroup <- (count - 1) / 2
+      coordinates <- c(position.left(perGroup), midpoint, position.right(perGroup)) - offset
+      return(coordinates)
     }
   }
