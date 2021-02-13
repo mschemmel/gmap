@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mschemmel/gmap.svg?branch=master)](https://travis-ci.org/mschemmel/gmap)
+
 # gmap
 An R package to visualize genetic maps.
 
