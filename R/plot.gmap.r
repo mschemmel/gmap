@@ -17,6 +17,10 @@ plot.gmap <- function(chrmap = NULL,
 					  color.highlight.lod = "deepskyblue1",
 					  color.highlight.peak = "red",
 					  show.lod = FALSE,
+					  border = FALSE,
+					  border.linetype = "solid",
+					  border.color = "black",
+					  border.linewidth = 1,
 					  ...){
 
 		  # error handling
@@ -67,9 +71,9 @@ plot.gmap <- function(chrmap = NULL,
 			scale(maxcm)
 			}
 
-		  # add chromosome label if requested
+		  # add linkage group label if requested
 		  if (!is.null(label.chr)) {
-			# check if provided chromosome labels match number of requested number of linkage groups
+			# check if provided linkage group labels match number of requested number of linkage groups
 			# if not: restrict to first x elements
 			if (length(label.chr) != length(lingroup)){
 			  label.chr = label.chr[1:length(lingroup)]
@@ -95,8 +99,8 @@ plot.gmap <- function(chrmap = NULL,
 			   border = locations$color)
 
 		  if (draw.border){
-			# add chromosome segments
-			# pull chromosome coordinates out of 'locations' dataframe
+			# add linkage group segments
+			# pull linkage group coordinates out of 'locations' dataframe
 			borders <- locations[!duplicated(locations$leftborder), c("leftborder", "rightborder", "height")]
 
 			# draw linkage groups on resulting border coordinates
@@ -134,5 +138,10 @@ plot.gmap <- function(chrmap = NULL,
 					 y1 = plotSizeY + 100 + relcount,
 					 lwd = 5,
 					 col = marker.count.color)
+		  }
+		  if(border){
+			box(col = border.color,
+				lty = border.linetype, 
+				lwd = border.linewidth)
 		  }
   }
