@@ -1,3 +1,4 @@
+#' @export
 telomere <- function(location, x, y, r, start = 0, end = pi, nsteps = 1000) {
   rs <- seq(start, end, len = nsteps)
 

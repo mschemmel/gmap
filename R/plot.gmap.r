@@ -1,3 +1,4 @@
+#' @export
 plot.gmap <- function(chrmap = NULL,
 					  lingroup = NULL,
 					  title = "",

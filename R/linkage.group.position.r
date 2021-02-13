@@ -1,3 +1,4 @@
+#' @export
 calculate.linkage.position <- function(plotSize = NULL, count = NULL) {
     if(is.null(plotSize)){
       error("Size of plot is missing.")

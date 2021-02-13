@@ -1,3 +1,4 @@
+#' @export
 read.map <- function(file = NULL, ...) {
     # error handling
     if (is.null(file)) {

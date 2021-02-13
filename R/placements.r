@@ -1,4 +1,4 @@
-# create data frame of requested chromosomes
+#' @export
 placements <- function(dfori, chromosomes, xsize, ysize, telsize){
   # prepare data frame of calculated locations
   targets_chr <- data.frame(targets = as.character(chromosomes),

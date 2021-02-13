@@ -1,5 +1,4 @@
-# still in progress, NOT working by now
-
+#' @export
 scale <- function(maxval) {
     roundto = 100
 	roundup <- function(maxval, to = roundto) { to*(maxval%/%to + as.logical(maxval%%to)) }
