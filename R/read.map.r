@@ -1,3 +1,9 @@
+#' Function to read genetic/linkage map
+#' 
+#' @param file Filepath of genetic/linkage map
+#' @return Correctly formatted genetic/linkage map
+#' @examples
+#' read.map("your/path/map.txt", sep = "\t", head = FALSE)
 #' @export
 read.map <- function(file = NULL, ...) {
     # error handling

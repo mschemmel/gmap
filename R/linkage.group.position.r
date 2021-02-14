@@ -1,3 +1,10 @@
+#' Calculate position of linkage group on plot area
+#' 
+#' @param plotSize Dimension (size) of x axis
+#' @param count Number of linkage groups
+#' @return positional coordinates
+#' @examples
+#' calculate.linkage.position(plotSize, count)
 #' @export
 calculate.linkage.position <- function(plotSize = NULL, count = NULL) {
     if(is.null(plotSize)){

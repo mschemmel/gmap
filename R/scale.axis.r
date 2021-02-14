@@ -1,5 +1,10 @@
+#' Function to determine y axis values
+#' 
+#' @param maxval Maximum value of frequency in original data frame
+#' @examples
+#' scale.axis(maxval)
 #' @export
-scale <- function(maxval) {
+scale.axis <- function(maxval) {
     roundto = 100
 	roundup <- function(maxval, to = roundto) { to*(maxval%/%to + as.logical(maxval%%to)) }
 			

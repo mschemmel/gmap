@@ -1,3 +1,13 @@
+#' Conclude position of linkage group on plot area
+#' 
+#' @param dfori Original data frame
+#' @param chromosomes Character vector of requested linkage groups
+#' @param xsize X size of plot area
+#' @param ysize Y size of plot area
+#' @param telsize Value of telomere size (Default = 40)
+#' @return Modified data frame extended by positional values
+#' @examples
+#' placements(dfori, chromosomes, xsize, ysize, telsize)
 #' @export
 placements <- function(dfori, chromosomes, xsize, ysize, telsize){
   # prepare data frame of calculated locations

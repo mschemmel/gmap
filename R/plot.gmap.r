@@ -1,3 +1,26 @@
+#' Plot genetic/linkage map with all requested settings
+#' @param chrmap Data frame of all marker plus linkage groups and frequency values
+#' @param lingroup Character vector specifying the linkaga groups to draw
+#' @param title Title of the plot
+#' @param linkage.width Relative width of a single linkage group on plot (Default: 0.4)
+#' @param label.x Text label of the x axis (Default: "Distance (cM)")
+#' @param label.chr Text label shown beneath the linkage groups
+#' @param cex.label.chr Size of the linkage group text labels (Default: 0.7)
+#' @param marker.color Color of marker (Default: "deepskyblue")
+#' @param marker.count.color Color of the marker count annotation (Default: "deepskyblue")
+#' @param marker.count.width Width of bar of marker count annotation
+#' @param draw.border Boolean value if border around linkage group should be displayed (Default: TRUE)
+#' @param highlight.peak Character vector of all markers to highlight
+#' @param show.axis Boolean value if y axis should be displayed
+#' @param show.marker.count Boolean value if marker count annotation should be displayed
+#' @param cex.marker.count Size of text label of marker count annotation
+#' @param color.highlight.peak Color of highlighted marker (Default: "red")
+#' @param border Boolean value if border around plot area should be displayed (Default: FALSE)
+#' @param border.linetype Linetype of border line
+#' @param border.linewidth Value of line width of border around plot
+#' @param border.color Color of border around plot
+#' @examples 
+#' plot.gmap(chrmap, lingroup)
 #' @export
 plot.gmap <- function(chrmap = NULL,
 					  lingroup = NULL,
@@ -8,18 +31,17 @@ plot.gmap <- function(chrmap = NULL,
 					  cex.label.chr = 0.7,
 					  marker.color = "deepskyblue3",
 					  marker.count.color = "deepskyblue3",
+					  marker.count.width = 5,
 					  draw.border = TRUE,
-					  fill.color = c(255, 0, 0, 255),
 					  highlight.peak = NULL,
 					  show.axis = FALSE,
 					  show.marker.count = FALSE,
 					  cex.marker.count = 0.7,
-					  marker.count.width = 5,
 					  color.highlight.peak = "red",
 					  border = FALSE,
 					  border.linetype = "solid",
-					  border.color = "black",
 					  border.linewidth = 1,
+					  border.color = "black",
 					  ...){
 
 		  # error handling
@@ -63,7 +85,7 @@ plot.gmap <- function(chrmap = NULL,
 		  if (show.axis == TRUE) {
 			mtext(label.x, 2, 2)
 			maxcm <- max(locations$cM)
-			scale(maxcm)
+			scale.axis(maxcm)
 		  }
 
 		  # add linkage group label
