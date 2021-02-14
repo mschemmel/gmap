@@ -1,13 +1,13 @@
 Package: gmap
 Type: Package
-Title: Visualize genetic maps 
+Title: Visualize genetic/linkage maps 
 Version: 0.1.0
 Author: Markus Schemmel 
 Maintainer: Markus Schemmel <mschemmel@online.de>
 Description: Genetic maps (linkage maps) are used to visualize positions of genes or genetic markers based on their recombination 
     frequency rather than their real physical location. The gmap package provides an approach to visualize genetic maps 
     in a simple and efficient way.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
