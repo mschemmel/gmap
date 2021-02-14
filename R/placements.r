@@ -12,8 +12,8 @@
 placements <- function(dfori, chromosomes, xsize, ysize, telsize){
   # prepare data frame of calculated locations
   targets_chr <- data.frame(targets = as.character(chromosomes),
-                            leftborder = as.numeric(calculate.linkage.position(xsize, length(chromosomes))),
-                            rightborder = as.numeric(calculate.linkage.position(xsize, length(chromosomes)) + telsize),
+                            leftborder = as.numeric(linkage.group.position(xsize, length(chromosomes))),
+                            rightborder = as.numeric(linkage.group.position(xsize, length(chromosomes)) + telsize),
                             size = round(as.numeric(tapply(dfori$cM, dfori$chr, max)[chromosomes]),1))
   
   targets_chr$height <- round((900 * (targets_chr$size / max(targets_chr$size))), 1)	

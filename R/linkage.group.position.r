@@ -4,14 +4,15 @@
 #' @param count Number of linkage groups
 #' @return positional coordinates
 #' @examples
-#' calculate.linkage.position(plotSize, count)
+#' linkage.group.position(plotSize, count)
+#' @importFrom utils head tail
 #' @export
-calculate.linkage.position <- function(plotSize = NULL, count = NULL) {
+linkage.group.position <- function(plotSize = NULL, count = NULL) {
     if(is.null(plotSize)){
-      error("Size of plot is missing.")
+      stop("Size of plot is missing.")
     }
     if(is.null(count)){
-      error("Number of linkage groups missing.")
+      stop("Number of linkage groups missing.")
     }
     
     distance <- 80

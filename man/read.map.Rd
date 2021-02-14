@@ -16,5 +16,5 @@ Correctly formatted genetic/linkage map
 Function to read genetic/linkage map
 }
 \examples{
-read.map("your/path/map.txt", sep = "\t", head = FALSE)
+read.map("your/path/map.txt")
 }

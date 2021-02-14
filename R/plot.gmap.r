@@ -1,5 +1,5 @@
 #' Plot genetic/linkage map with all requested settings
-#' @param chrmap Data frame of all marker plus linkage groups and frequency values
+#' @param linmap Data frame of all marker plus linkage groups and frequency values
 #' @param lingroup Character vector specifying the linkaga groups to draw
 #' @param title Title of the plot
 #' @param linkage.width Relative width of a single linkage group on plot (Default: 0.4)
@@ -21,8 +21,9 @@
 #' @param border.color Color of border around plot
 #' @examples 
 #' plot.gmap(chrmap, lingroup)
+#' @importFrom graphics box mtext rect segments text
 #' @export
-plot.gmap <- function(chrmap = NULL,
+plot.gmap <- function(linmap = NULL,
 					  lingroup = NULL,
 					  title = "",
 					  linkage.width = 0.4,
@@ -41,8 +42,7 @@ plot.gmap <- function(chrmap = NULL,
 					  border = FALSE,
 					  border.linetype = "solid",
 					  border.linewidth = 1,
-					  border.color = "black",
-					  ...){
+					  border.color = "black"){
 
 		  # error handling
 		  if (is.null(chrmap)) {
@@ -78,8 +78,7 @@ plot.gmap <- function(chrmap = NULL,
 			   bty = "n",
 			   xlab = "",
 			   ylab = "",
-			   main = title,
-			   ...)
+			   main = title)
 
 		  # show axis
 		  if (show.axis == TRUE) {

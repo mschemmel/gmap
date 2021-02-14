@@ -24,8 +24,7 @@
   border = FALSE,
   border.linetype = "solid",
   border.linewidth = 1,
-  border.color = "black",
-  ...
+  border.color = "black"
 )
 }
 \arguments{

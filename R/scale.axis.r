@@ -3,6 +3,7 @@
 #' @param maxval Maximum value of frequency in original data frame
 #' @examples
 #' scale.axis(maxval)
+#' @importFrom graphics text
 #' @export
 scale.axis <- function(maxval) {
     roundto = 100
