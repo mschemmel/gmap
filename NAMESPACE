@@ -6,3 +6,5 @@ export(placements)
 export(read.map)
 export(scale)
 export(telomere)
+
+importFrom("graphics","box","lines","mtext","rect","segments","text","utils","head","read.table","tail")
