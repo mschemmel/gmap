@@ -1,4 +1,1 @@
 language: r
-cache: packages
-notifications:
-  email: false
