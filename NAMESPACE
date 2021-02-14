@@ -7,4 +7,5 @@ export(read.map)
 export(scale)
 export(telomere)
 
-importFrom("graphics","box","lines","mtext","rect","segments","text","utils","head","read.table","tail")
+importFrom("graphics","plot","box","lines","mtext","rect","segments","text")
+importFrom("utils","head","read.table","tail")
