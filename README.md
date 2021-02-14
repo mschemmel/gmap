@@ -6,7 +6,7 @@ An R package to visualize genetic maps.
 
 ## Installation
 ### Development version
-So far, gmap is only available on GitHub because it is still in development stage.
+So far, gmap is only available on GitHub because it is still in __development stage__.
 
 ```r
 # use devtools to install the development version
