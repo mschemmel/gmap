@@ -28,7 +28,7 @@ linkagegroup <- c("lg0", "lg1", "lg2", "lg3", "lg4")
 # minimal example
 genmap(linmap, linkagegroup)
 
-# more advanced plotting
+# more advanced example
 genmap(linmap,
        linkagegroup, 
        title = "Organism", 
