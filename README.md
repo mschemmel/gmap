@@ -19,23 +19,23 @@ devtools::install_github("mschemmel/gmap")
 library(gmap)
 
 # import genetic map
-linmap <- read.map("/examples/map.txt")
+linmap <- read.map("inst/extdata/map.txt")
 
 # plot genetic map with requested linkage groups
 # store IDs of linkage groups
 linkagegroup <- c("lg0", "lg1", "lg2", "lg3", "lg4") 
 
 # minimal example
-gmap(linmap, linkagegroup)
+genmap(linmap, linkagegroup)
 
 # more advanced plotting
-gmap(linmap,
-         linkagegroup, 
-         title = "Organism", 
-         marker.color = "aquamarine3",
-         show.marker.count = TRUE,
-         marker.count.color = "gray50",
-         show.axis = TRUE)
+genmap(linmap,
+       linkagegroup, 
+       title = "Organism", 
+       marker.color = "aquamarine3",
+       show.marker.count = TRUE,
+       marker.count.color = "gray50",
+       show.axis = TRUE)
 ```
 
 For more detailed information see the wiki (in planning).
