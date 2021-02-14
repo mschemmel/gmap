@@ -19,11 +19,10 @@
 #' @param border.linetype Linetype of border line
 #' @param border.linewidth Value of line width of border around plot
 #' @param border.color Color of border around plot
-#' @examples 
-#' plot.gmap(chrmap, lingroup)
+#' @param ... further parameter of plot function (base R)
 #' @importFrom graphics box mtext rect segments text
 #' @export
-plot.gmap <- function(linmap = NULL,
+genmap <- function(linmap = NULL,
 					  lingroup = NULL,
 					  title = "",
 					  linkage.width = 0.4,
@@ -42,15 +41,16 @@ plot.gmap <- function(linmap = NULL,
 					  border = FALSE,
 					  border.linetype = "solid",
 					  border.linewidth = 1,
-					  border.color = "black"){
+					  border.color = "black",
+					  ...){
 
 		  # error handling
-		  if (is.null(chrmap)) {
+		  if (is.null(linmap)) {
 			stop("No marker/linkage group table specified")
 		  }
 
-		  if (length(lingroup) > length(table(chrmap$chr))) {
-			lingroup <- lingroup[1:length(table(chrmap$chr))]
+		  if (length(lingroup) > length(table(linmap$chr))) {
+			lingroup <- lingroup[1:length(table(linmap$chr))]
 			warning("Requested linkage groups to draw exceeded actual number of linkage groups in table. \n Linkage groups were limited to maximum number available in provided genetic map.")
 		  }
 
@@ -60,7 +60,7 @@ plot.gmap <- function(linmap = NULL,
 		  plotSizeY <- 1000
 
 		  # calculate and populate original table with absolute positions of every marker and linkage group
-		  locations <- placements(chrmap, lingroup, plotSizeX, plotSizeY, TelomereSize)
+		  locations <- placements(linmap, lingroup, plotSizeX, plotSizeY, TelomereSize)
 		  
 		  # store midpoints of drawn linkage groups
 		  mid <- unique(locations$leftborder) + (TelomereSize / 2)
@@ -78,13 +78,14 @@ plot.gmap <- function(linmap = NULL,
 			   bty = "n",
 			   xlab = "",
 			   ylab = "",
-			   main = title)
+			   main = title,
+			   ...)
 
 		  # show axis
 		  if (show.axis == TRUE) {
 			mtext(label.x, 2, 2)
 			maxcm <- max(locations$cM)
-			scale.axis(maxcm)
+			freq.axis(maxcm)
 		  }
 
 		  # add linkage group label

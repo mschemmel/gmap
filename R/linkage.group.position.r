@@ -3,8 +3,6 @@
 #' @param plotSize Dimension (size) of x axis
 #' @param count Number of linkage groups
 #' @return positional coordinates
-#' @examples
-#' linkage.group.position(plotSize, count)
 #' @importFrom utils head tail
 #' @export
 linkage.group.position <- function(plotSize = NULL, count = NULL) {

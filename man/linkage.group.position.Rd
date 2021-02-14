@@ -17,6 +17,3 @@ positional coordinates
 \description{
 Calculate position of linkage group on plot area
 }
-\examples{
-linkage.group.position(plotSize, count)
-}

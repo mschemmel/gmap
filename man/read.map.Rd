@@ -4,7 +4,7 @@
 \alias{read.map}
 \title{Function to read genetic/linkage map}
 \usage{
-read.map(file = NULL, ...)
+read.map(file = NULL)
 }
 \arguments{
 \item{file}{Filepath of genetic/linkage map}
@@ -14,7 +14,4 @@ Correctly formatted genetic/linkage map
 }
 \description{
 Function to read genetic/linkage map
-}
-\examples{
-read.map("your/path/map.txt")
 }

@@ -2,8 +2,6 @@
 #' 
 #' @param file Filepath of genetic/linkage map
 #' @return Correctly formatted genetic/linkage map
-#' @examples
-#' read.map("your/path/map.txt")
 #' @importFrom utils read.table head
 #' @export
 read.map <- function(file = NULL) {

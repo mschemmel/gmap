@@ -7,8 +7,6 @@
 #' @param start Start value of calculation (Default: 0)
 #' @param end End value of calculation (Default: pi)
 #' @param nsteps Number od steps in between for calculation (Default: 1000)
-#' @examples
-#' telomere(location, x, y, r, start, end, nsteps)
 #' @importFrom graphics lines
 #' @export
 telomere <- function(location, x, y, r, start = 0, end = pi, nsteps = 1000) {

@@ -1,11 +1,10 @@
 #' Arbitrarily created data of a genetic/linkage map
-#'
+#' 
+#' @description Table of linkage groups and markers and their corresponding recombination frequency (cM).
+#' @name linmap
+#' @title Linkage map dataset
+#' 
 #' @docType data
 #'
 #' @usage data(linmap)
-#'
-#' @keywords datasets
-#'
-#' @examples
-#' data(linmap)
-"linmap"
+NULL

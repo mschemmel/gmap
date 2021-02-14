@@ -6,8 +6,6 @@
 #' @param ysize Y size of plot area
 #' @param telsize Value of telomere size (Default = 40)
 #' @return Modified data frame extended by positional values
-#' @examples
-#' placements(dfori, chromosomes, xsize, ysize, telsize)
 #' @export
 placements <- function(dfori, chromosomes, xsize, ysize, telsize){
   # prepare data frame of calculated locations

@@ -23,6 +23,3 @@ Modified data frame extended by positional values
 \description{
 Conclude position of linkage group on plot area
 }
-\examples{
-placements(dfori, chromosomes, xsize, ysize, telsize)
-}

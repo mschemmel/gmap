@@ -26,10 +26,10 @@ linmap <- read.map("/examples/map.txt")
 linkagegroup <- c("lg0", "lg1", "lg2", "lg3", "lg4") 
 
 # minimal example
-plot.map(linmap, linkagegroup)
+gmap(linmap, linkagegroup)
 
 # more advanced plotting
-plot.map(linmap,
+gmap(linmap,
          linkagegroup, 
          title = "Organism", 
          marker.color = "aquamarine3",

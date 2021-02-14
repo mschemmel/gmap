@@ -24,6 +24,3 @@ telomere(location, x, y, r, start = 0, end = pi, nsteps = 1000)
 \description{
 Function to plot telomere on plot
 }
-\examples{
-telomere(location, x, y, r, start, end, nsteps)
-}
