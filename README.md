@@ -43,5 +43,5 @@ For more detailed information see the wiki (in planning).
 ## Example
 
 <p align="center">
-<img src="/img/example.svg" width:"50%">
+<img src="/inst/extdata/example.svg" width:"50%">
 </p>
