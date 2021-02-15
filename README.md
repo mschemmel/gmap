@@ -22,6 +22,14 @@ devtools::install_github("mschemmel/gmap")
 library(gmap)
 
 # import genetic map
+# Input dataframe
+# ------------------------------
+# marker  | linkage group | cM
+# ------------------------------
+# marker1 |     lg01      | 0
+# marker2 |     lg01      | 0.4
+# marker3 |     lg01      | 0.8
+# ...     |     ...       | ...
 linmap <- read.map("inst/extdata/map.txt")
 
 # plot genetic map with requested linkage groups
