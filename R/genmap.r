@@ -107,6 +107,11 @@ genmap <- function(linmap = NULL,
 			text(x = mid, y = -100, labels = label.chr, cex = cex.label.chr, adj = 0.5)
 		  }
 
+		  # marker highlighting
+		  if (!is.null(highlight.marker)) {
+			  locations[locations$marker %in% highlight.marker, ]$color <- highlight.marker.color
+		  }
+
 		  # add marker to plot
 		  rect(locations$leftborder,
 			   locations$startabsolute,
@@ -114,6 +119,7 @@ genmap <- function(linmap = NULL,
 			   locations$endabsolute,
 			   border = locations$color)
 
+		  # if border of linkage groups are requested
 		  if (draw.border){
 			# add linkage group segments
 			# pull linkage group coordinates out of 'locations' dataframe
@@ -130,6 +136,8 @@ genmap <- function(linmap = NULL,
 			}
 		  }
 
+
+		  # marker count summary
 		  if (show.marker.count) {
 			# draw numerical marker count above respective linkage groups
 			marker.count.label = as.vector(table(locations$chr))[1:length(lingroup)]
