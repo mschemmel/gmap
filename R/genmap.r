@@ -10,11 +10,11 @@
 #' @param marker.count.color Color of the marker count annotation (Default: "deepskyblue")
 #' @param marker.count.width Width of bar of marker count annotation
 #' @param draw.border Boolean value if border around linkage group should be displayed (Default: TRUE)
-#' @param highlight.peak Character vector of all markers to highlight
+#' @param highlight.marker Character vector of all markers to highlight
+#' @param highlight.marker.color Color of highlighted marker (Default: "red")
 #' @param show.axis Boolean value if y axis should be displayed
 #' @param show.marker.count Boolean value if marker count annotation should be displayed
 #' @param cex.marker.count Size of text label of marker count annotation
-#' @param color.highlight.peak Color of highlighted marker (Default: "red")
 #' @param border Boolean value if border around plot area should be displayed (Default: FALSE)
 #' @param border.linetype Linetype of border line
 #' @param border.linewidth Value of line width of border around plot
@@ -33,11 +33,11 @@ genmap <- function(linmap = NULL,
 					  marker.count.color = "deepskyblue3",
 					  marker.count.width = 5,
 					  draw.border = TRUE,
-					  highlight.peak = NULL,
+					  highlight.marker = NULL,
+					  highlight.marker.color = "red",
 					  show.axis = FALSE,
 					  show.marker.count = FALSE,
 					  cex.marker.count = 0.7,
-					  color.highlight.peak = "red",
 					  border = FALSE,
 					  border.linetype = "solid",
 					  border.linewidth = 1,
@@ -100,13 +100,14 @@ genmap <- function(linmap = NULL,
 			if(is.numeric(label.chr)){
 				label.chr = names(table(locations$chr))
 			}
+			# no range but character vector
 			else{
 				label.chr = label.chr
 			}
 			text(x = mid, y = -100, labels = label.chr, cex = cex.label.chr, adj = 0.5)
 		  }
 
-		  # add marker itself on plot
+		  # add marker to plot
 		  rect(locations$leftborder,
 			   locations$startabsolute,
 			   locations$rightborder,
