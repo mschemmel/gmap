@@ -1,7 +1,8 @@
+[![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Build Status](https://travis-ci.org/mschemmel/gmap.svg?branch=master)](https://travis-ci.org/mschemmel/gmap)
 [![](https://img.shields.io/github/languages/code-size/mschemmel/gmap.svg)](https://github.com/mschemmel/gmap)
 [![](https://img.shields.io/github/last-commit/mschemmel/gmap.svg)](https://github.com/mschemmel/gmap/commits/master)
-[![](https://codecov.io/gh/mschemmel/gmap/branch/master/graph/badge.svg)](https://codecov.io/gh/mschemmel/gmap)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
 
 # gmap
 An R package to visualize genetic maps.
