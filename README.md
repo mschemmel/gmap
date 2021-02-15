@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/mschemmel/gmap.svg?branch=master)](https://travis-ci.org/mschemmel/gmap)
 [![](https://img.shields.io/github/languages/code-size/mschemmel/gmap.svg)](https://github.com/mschemmel/gmap)
 [![](https://img.shields.io/github/last-commit/mschemmel/gmap.svg)](https://github.com/mschemmel/gmap/commits/master)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.org/web/licenses/MIT)
+[![R build status](https://github.com/mschemmel/gmap/workflows/R-CMD-check/badge.svg)](https://github.com/mschemmel/gmap/actions)
 
 # gmap
 An R package to visualize genetic maps.
