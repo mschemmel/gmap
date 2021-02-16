@@ -109,7 +109,13 @@ genmap <- function(linmap = NULL,
 
 		  # marker highlighting
 		  if (!is.null(highlight.marker)) {
-			  locations[locations$marker %in% highlight.marker, ]$color <- highlight.marker.color
+			  #TODO fix before commiting!!!
+			  if (all(highlight.marker %in% locations$marker)){
+			  	locations[locations$marker %in% highlight.marker, ]$color <- highlight.marker.color
+			  }
+			  else {
+				  stop("Marker requested to highlight are not present in the genetic map you provided.")
+			  }
 		  }
 
 		  # add marker to plot

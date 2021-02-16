@@ -16,11 +16,11 @@ genmap(
   marker.count.color = "deepskyblue3",
   marker.count.width = 5,
   draw.border = TRUE,
-  highlight.peak = NULL,
+  highlight.marker = NULL,
+  highlight.marker.color = "red",
   show.axis = FALSE,
   show.marker.count = FALSE,
   cex.marker.count = 0.7,
-  color.highlight.peak = "red",
   border = FALSE,
   border.linetype = "solid",
   border.linewidth = 1,
@@ -51,15 +51,15 @@ genmap(
 
 \item{draw.border}{Boolean value if border around linkage group should be displayed (Default: TRUE)}
 
-\item{highlight.peak}{Character vector of all markers to highlight}
+\item{highlight.marker}{Character vector of all markers to highlight}
+
+\item{highlight.marker.color}{Color of highlighted marker (Default: "red")}
 
 \item{show.axis}{Boolean value if y axis should be displayed}
 
 \item{show.marker.count}{Boolean value if marker count annotation should be displayed}
 
 \item{cex.marker.count}{Size of text label of marker count annotation}
-
-\item{color.highlight.peak}{Color of highlighted marker (Default: "red")}
 
 \item{border}{Boolean value if border around plot area should be displayed (Default: FALSE)}
 
