@@ -56,6 +56,7 @@ genmap(linmap,
 <img src="/inst/extdata/example.svg" width:"50%">
 </p>
 
+### Add highlighting and annotation labels
 ```r
 genmap(linmap,
        linkagegroup, 
@@ -64,10 +65,11 @@ genmap(linmap,
        show.marker.count = TRUE,
        marker.count.color = "gray50",
        show.axis = TRUE,
+       label.chr = c(1:12),
        highlight.marker = list(firebrick = c("marker150", "marker222","marker250", "marker251"),
-				   gold = c("marker89", "marker100"),
-				   brown = linmap$marker[800:810],
-	       		   red = linmap$marker[1100:1110]))
+                               gold = c("marker89", "marker100"),
+                               brown = linmap$marker[800:810],
+                               red = linmap$marker[1100:1110]))
 ```
 <p align="center">
 <img src="/inst/extdata/example2.svg" width:"50%">
