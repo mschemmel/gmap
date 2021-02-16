@@ -22,7 +22,7 @@ devtools::install_github("mschemmel/gmap")
 library(gmap)
 
 # import genetic map
-# Input dataframe
+
 # ------------------------------
 # marker  | linkage group | cM
 # ------------------------------
