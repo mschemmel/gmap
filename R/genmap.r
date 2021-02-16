@@ -107,6 +107,18 @@ genmap <- function(linmap = NULL,
 			text(x = mid, y = -100, labels = label.chr, cex = cex.label.chr, adj = 0.5)
 		  }
 
+		  # marker highlighting
+		  if (!is.null(highlight.marker)) {
+			  for(reqcolor in names(highlight.marker)){
+				  if(all(unname(unlist(highlight.marker[reqcolor])) %in% locations$marker)){
+			  		locations[locations$marker %in% unname(unlist(highlight.marker[reqcolor])), ]$color <- reqcolor
+				  }
+				  else {
+					  stop("You requested marker to highlight which are not present in the provided linkage map")
+				  }
+			  }
+		  }
+
 		  # add marker to plot
 		  rect(locations$leftborder,
 			   locations$startabsolute,
