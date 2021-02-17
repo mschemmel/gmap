@@ -1,18 +1,13 @@
 language: r
 cache: packages
-sudo: false
 
-warnings_are_errors: ture
+warnings_are_errors: true
 
 os:
-  -linux
-  -osx
+  - linux
+  - osx
 
 r:
-  - 3.4
-  - 3.5
-  - 3.6
-  - 3.7
   - 3.8
   - 3.9
   - 4.0
