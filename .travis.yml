@@ -10,5 +10,15 @@ os:
 
 r:
   - 3.4
+  - 3.5
+  - 3.6
+  - 3.7
+  - 3.8
+  - 3.9
+  - 4.0
   - release
   - devel
+
+after_success:
+  - Rscript -e 'covr::codecov(type = "all")'
+

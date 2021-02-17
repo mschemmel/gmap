@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/mschemmel/gmap.svg?branch=master)](https://travis-ci.org/mschemmel/gmap)
 [![](https://img.shields.io/github/languages/code-size/mschemmel/gmap.svg)](https://github.com/mschemmel/gmap)
 [![](https://img.shields.io/github/last-commit/mschemmel/gmap.svg)](https://github.com/mschemmel/gmap/commits/master)
+[![Codecov test coverage](https://codecov.io/gh/mschemmel/gmap/branch/master/graph/badge.svg)](https://codecov.io/gh/mschemmel/gmap?branch=master)
 
 # gmap
 An R package to visualize genetic maps.
