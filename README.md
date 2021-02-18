@@ -32,16 +32,17 @@ library(gmap)
 # ...     |     ...       | ...
 linmap <- read.map("inst/extdata/map.txt")
 
-# plot genetic map with requested linkage groups
+# store IDs of linkage groups to plot 
 linkagegroup <- c("lg0", "lg1", "lg2", "lg3", "lg4") 
 
 # minimal example
+# plot genetic map with requested linkage groups
 genmap(linmap, linkagegroup)
 ```
 
 For more detailed information see the wiki (in planning).
 
-## Example
+## Examples
 ```r
 genmap(linmap,
        linkagegroup, 
@@ -55,7 +56,7 @@ genmap(linmap,
 <img src="/inst/extdata/example.svg" width:"50%">
 </p>
 
-### Add highlighting and annotation labels
+### Add highlighting and annotation label
 ```r
 genmap(linmap,
        linkagegroup, 
