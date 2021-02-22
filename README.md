@@ -14,6 +14,7 @@ So far, gmap is only available on GitHub because it is still in __development st
 
 ```r
 # use devtools to install the development version
+library(devtools)
 devtools::install_github("mschemmel/gmap")
 ```
 
