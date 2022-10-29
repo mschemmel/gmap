@@ -22,27 +22,28 @@
 #' @param ... further parameter of plot function (base R)
 #' @importFrom graphics box mtext rect segments text
 #' @export
+
 genmap <- function(linmap = NULL,
-					  lingroup = NULL,
-					  title = "",
-					  linkage.width = 0.4,
-					  label.x = "Distance (cM)",
-					  label.chr = NULL,
-					  cex.label.chr = 0.7,
-					  marker.color = "deepskyblue3",
-					  marker.count.color = "deepskyblue3",
-					  marker.count.width = 5,
-					  draw.border = TRUE,
-					  highlight.marker = NULL,
-					  highlight.marker.color = "red",
-					  show.axis = FALSE,
-					  show.marker.count = FALSE,
-					  cex.marker.count = 0.7,
-					  border = FALSE,
-					  border.linetype = "solid",
-					  border.linewidth = 1,
-					  border.color = "black",
-					  ...){
+				   lingroup = NULL,
+				   title = "",
+				   linkage.width = 0.4,
+				   label.x = "Distance (cM)",
+				   label.chr = NULL,
+				   cex.label.chr = 0.7,
+				   marker.color = "deepskyblue3",
+				   marker.count.color = "deepskyblue3",
+				   marker.count.width = 5,
+				   draw.border = TRUE,
+				   highlight.marker = NULL,
+				   highlight.marker.color = "red",
+				   show.axis = FALSE,
+				   show.marker.count = FALSE,
+				   cex.marker.count = 0.7,
+				   border = FALSE,
+				   border.linetype = "solid",
+				   border.linewidth = 1,
+				   border.color = "black",
+				   ...){
 
 		  # error handling
 		  if (is.null(linmap)) {
@@ -97,11 +98,11 @@ genmap <- function(linmap = NULL,
 			  warning("Provided number of linkage group labels does not match actual number of given linkage groups.")
 			}
 			# if range is specified
-			if(is.numeric(label.chr)){
+			if (is.numeric(label.chr)){
 				label.chr = names(table(locations$chr))
 			}
 			# no range but character vector
-			else{
+			else {
 				label.chr = label.chr
 			}
 			text(x = mid, y = -100, labels = label.chr, cex = cex.label.chr, adj = 0.5)
@@ -162,7 +163,7 @@ genmap <- function(linmap = NULL,
 					 lwd = marker.count.width,
 					 col = marker.count.color)
 		  }
-		  if(border){
+		  if (border){
 			box(col = border.color,
 				lty = border.linetype, 
 				lwd = border.linewidth)
